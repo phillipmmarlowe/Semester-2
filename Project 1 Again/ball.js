@@ -3,7 +3,6 @@
 function Ball(loc, vel, height, base){
   this.loc = loc;
   this.vel = vel;
-  //this.rad = rad;
   this.height = height;
   this.base = base;
 }
@@ -19,24 +18,24 @@ Ball.prototype.checkEdges = function(){
 }
 
 Ball.prototype.update = function(){
-  this.loc.x += this.vel.x;
-  this.loc.y += this.vel.y;
+  //this.loc.x += this.vel.x;
+  //this.loc.y += this.vel.y;
   this.render();
 }
 
 Ball.prototype.render = function(){
   ctx.strokeStyle = 'rgba(55,50,220)';
   ctx.fillStyle = "rgba(255,162,12)";
+  ctx.fill();
   ctx.save();
   ctx.translate(this.loc.x,this.loc.y);
-  var temp = JSVector.addGetNew(center,canvasLoc);
-  var dir = JSVector.subGetNew(temp,this.loc);
-  var angle = dir.getDirection();
-  ctx.rotate(angle);
+  var temp2 = JSVector.addGetNew(mouseLoc,canvasLoc);
+  var temp = JSVector.subGetNew(temp2,this.loc);
+
+  ctx.rotate(temp.getDirection());
   ctx.beginPath();
   ctx.moveTo(-this.height/2,-this.base/2);
   ctx.lineTo(this.height/2,0);
   ctx.lineTo(-this.height/2,this.base/2);
-  ctx.fill();
   ctx.restore();
 }
