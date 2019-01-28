@@ -29,9 +29,8 @@ Ball.prototype.render = function(){
   ctx.fill();
   ctx.save();
   ctx.translate(this.loc.x,this.loc.y);
-  var temp2 = JSVector.addGetNew(mouseLoc,canvasLoc);
-  var temp = JSVector.subGetNew(temp2,this.loc);
-
+  temp2 = JSVector.addGetNew(mouseLoc,canvasLoc);
+  temp = JSVector.subGetNew(temp2,this.loc);
   ctx.rotate(temp.getDirection());
   ctx.beginPath();
   ctx.moveTo(-this.height/2,-this.base/2);
