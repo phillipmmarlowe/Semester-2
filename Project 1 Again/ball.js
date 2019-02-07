@@ -24,8 +24,8 @@ Ball.prototype.update = function(){
 }
 
 Ball.prototype.render = function(){
-  ctx.strokeStyle = 'rgba(55,50,220)';
-  ctx.fillStyle = "rgba(255,162,12)";
+  ctx.strokeStyle = 'rgb(55,50,220)';
+  ctx.fillStyle = "rgb(255,162,12)";
   ctx.fill();
   ctx.save();
   ctx.translate(this.loc.x,this.loc.y);
