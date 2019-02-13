@@ -13,6 +13,7 @@ function Cell(x, y, width, height){
 Cell.prototype.render = function(){
   ctx.strokeStyle = 'black';
   ctx.fillStyle = "rgb(255,162,12)";
+  this.color = "rgb(255,162,12)";
   ctx.rect(this.x,this.y,this.width,this.height);
   ctx.fillRect(this.x,this.y,this.width,this.height);
   ctx.stroke();
