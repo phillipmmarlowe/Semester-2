@@ -78,23 +78,23 @@ function mouseClickHandler(event){
   var locateCellY = cells[locateX][locateY].y;
   if(cells[locateX][locateY].color=="rgb(0,0,0)"){
     cells[locateX][locateY].color = "rgb(255,162,12)";
-    for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){cells[locateX][locateY].neighbors[i].color = 'rgb(255,162,12)';} 
+    for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){cells[locateX][locateY].neighbors[i].color = 'rgb(255,162,12)';}
     ctx.strokeStyle = 'black';
     ctx.fillStyle = "rgb(255,162,12)";
     ctx.fillRect(locateCellX,locateCellY,size,size);
     for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){ctx.fillRect(cells[locateX][locateY].neighbors[i].x,cells[locateX][locateY].neighbors[i].y,size,size);}
     ctx.stroke();
   } else if(cells[locateX][locateY].color=="rgb(255,162,12)"){
-    cells[locateX][locateY].color = "rgb(0,0,0)";
-    for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){cells[locateX][locateY].neighbors[i].color = 'rgb(255,162,12)';}
-    ctx.strokeStyle = 'black';
-    ctx.fillStyle = "rgb(0,0,0)";
-    //ctx.fillRect(locateCellX,locateCellY,size,size);
-    for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){ctx.fillRect(cells[locateX][locateY].neighbors[i].x,cells[locateX][locateY].neighbors[i].y,size,size);}
-    ctx.stroke();
+      cells[locateX][locateY].color = "rgb(0,0,0)";
+      for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){cells[locateX][locateY].neighbors[i].color = 'rgb(255,162,12)';}
+      ctx.strokeStyle = 'black';
+      ctx.fillStyle = "rgb(0,0,0)";
+      //ctx.fillRect(locateCellX,locateCellY,size,size);
+      for(var i=0;i<cells[locateX][locateY].neighbors.length;i++){ctx.fillRect(cells[locateX][locateY].neighbors[i].x,cells[locateX][locateY].neighbors[i].y,size,size);}
+      ctx.stroke();
   }
 }
-  
+
 
 
 
