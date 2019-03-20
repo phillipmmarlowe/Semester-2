@@ -5,13 +5,3 @@ body{
    margin:0;
    border: 0px;
  }
-
-#wrapperDiv{
- background-color: #003129;
- height: 833px;
- width: 800px;
- border: solid black 1px;
- margin:auto;
- margin-top: 20px;
-
-}
